@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-size: 1.2rem;
+  line-height: 1.6; }
+
+#showcase {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1.6rem;
+  position: relative; }
+  #showcase::before {
+    content: '';
+    background: url("../img/3.jpg") center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7; }
+  #showcase h1, #showcase p, #showcase .button {
+    z-index: 1; }
+  #showcase h1 {
+    font-family: "Cabin Sketch", serif;
+    font-size: 4rem;
+    line-height: 1.2;
+    color: #fff; }
+  #showcase p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    color: #fff; }
+  #showcase .button {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    background: #926239;
+    border: 2px solid #926239;
+    border-radius: 4px;
+    padding: 0.7rem 1.4rem;
+    margin-top: 1.4rem; }
+    #showcase .button:hover {
+      transform: rotate(-2deg);
+      background: #926239; }
+
+#section-a {
+  padding: 1.4rem;
+  text-align: justify;
+  background: #926239;
+  color: #fff; }
+
+#section-b {
+  padding: 1.4rem;
+  text-align: center;
+  background: #f4f4f4; }
+
+#section-c {
+  display: flex; }
+  #section-c > div {
+    padding: 1.4rem; }
+  #section-c .box-2 {
+    background: #f9f9f9; }
+  #section-c .box-1,
+  #section-c .box-3 {
+    background: #926239;
+    color: #fff; }
+
+/*# sourceMappingURL=main.css.map */
