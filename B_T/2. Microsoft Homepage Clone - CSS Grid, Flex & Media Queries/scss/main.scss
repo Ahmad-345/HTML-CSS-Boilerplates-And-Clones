@@ -41,17 +41,8 @@ ul {
   // background: lightskyblue;
 }
 
-// Utilities
-%btn-shared {
-  display: inline-block;
-  border: none;
-  font-weight: bold;
-  padding: 10px 20px;
-  background: #262626;
-  color: #fff;
-  font-size: 0.9rem;
-  cursor: pointer;
-}
+// partial
+@import 'buttons';
 
 // Nav
 .main-nav {
@@ -123,25 +114,7 @@ ul {
 
   // flex item
   & .showcase-btn {
-    @extend %btn-shared;
-    margin-top: 20px;
-    width: 125px;
-    word-wrap: none;
-    white-space: nowrap;
-    transition: all 200ms linear;
-    
-    &::after {
-      font-family: 'Font Awesome 5 Free';
-      content: '\f054';
-      font-weight: 900;
-      font-size: 0.9rem;
-      transition: all 300ms linear;
-      margin-left: 5px;
-    }
-
-    &:hover::after {
-      margin-left: 8px;
-    }
+    @extend %main-btn;
   }
 } // END::Header.Showcase
 
@@ -166,30 +139,7 @@ ul {
     }
 
     & a {
-      display: inline-block;
-      padding-top: 10px;
-      color: #0067B8;
-      text-transform: uppercase;
-      font-weight: bold;
-      transition: all 300ms linear;
-
-      &::after {
-        font-family: 'Font Awesome 5 Free';
-        content: '\f054';
-        font-weight: 900;
-        font-size: 0.9rem;
-        margin-left: 5px;
-        transition: all 150ms linear;
-      }
-
-      &:hover {
-        transform: rotate(2deg);
-        border-bottom: 2px solid #0067B8;
-
-        &::after {
-          margin-left: 7px;
-        }
-      }
+      @include linkAsButton;
     }
   }
 } // END::Section.Home Cards 1
@@ -210,25 +160,8 @@ ul {
       margin: 10px 0 20px;
     }
 
-    & .showcase-btn {
-      @extend %btn-shared;
-      width: 125px;
-      word-wrap: none;
-      white-space: nowrap;
-      transition: all 200ms linear;
-      
-      &::after {
-        font-family: 'Font Awesome 5 Free';
-        content: '\f054';
-        font-weight: 900;
-        font-size: 0.9rem;
-        transition: all 300ms linear;
-        margin-left: 5px;
-      }
-  
-      &:hover::after {
-        margin-left: 8px;
-      }
+    & .xbox-btn {
+      @extend %main-btn;
     }
   }
 } // END::Xbox
@@ -249,26 +182,9 @@ ul {
     }
 
     & .showcase-btn {
-      @extend %btn-shared;
-      width: 125px;
-      word-wrap: none;
-      white-space: nowrap;
-      transition: all 200ms linear;
+      @extend %main-btn;
       background: #f4f4f4;
       color: #333;
-      
-      &::after {
-        font-family: 'Font Awesome 5 Free';
-        content: '\f054';
-        font-weight: 900;
-        font-size: 0.9rem;
-        transition: all 300ms linear;
-        margin-left: 5px;
-      }
-  
-      &:hover::after {
-        margin-left: 8px;
-      }
     }
   }
 } // END::Carbon
@@ -311,6 +227,10 @@ ul {
 
     ul li {
       line-height: 2.8;
+
+      a:hover {
+        border-bottom: 1px #616161 solid;
+      }
     }
   }
 } // END::Links
@@ -350,6 +270,10 @@ ul {
       & li {
         margin-right: 30px;
         margin-bottom: 20px;
+
+        a:hover {
+          border-bottom: 1px #616161 solid;
+        }
       }
     }
   }
