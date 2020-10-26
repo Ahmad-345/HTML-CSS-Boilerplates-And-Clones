@@ -1,0 +1,30 @@
+
+/*  
+  CSS Pseudo Elements for Scrollbar Styling
+    *-> ::scrollbar
+    *-> ::scrollbar-thumb
+    *-> ::scrollbar-track
+    *-> ::scrollbar-corner
+*/
+
+// Custom Scrolls (mixin)
+@mixin customScroll {
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+
+    background: #d9d9d9;
+  }
+
+  &::-webkit-scrollbar-corner {
+    border-radius: 10px;
+    background: #d9d9d9;
+  }
+}

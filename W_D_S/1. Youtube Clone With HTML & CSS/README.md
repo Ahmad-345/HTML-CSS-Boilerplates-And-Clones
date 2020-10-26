@@ -1,0 +1,2 @@
+# YouTube Front End Clone Using HTML & CSS(SCSS)
+One of the best ways to improve your CSS skills is to clone existing websites. In this video I will be cloning the YouTube home page with just HTML and CSS. This clone is not 100% exactly like the YouTube homepage, but it is 95% the same which is good enough when you are creating a clone with the sole purpose of learning.
