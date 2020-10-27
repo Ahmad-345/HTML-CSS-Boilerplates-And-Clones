@@ -1,0 +1,124 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+// color varbiables 
+:root {
+  /*   color variables */
+  --clr-primary: #5930ff;
+  --clr-primary-hover: #29e6a7;
+  --clr-primary-dark: #039d69;
+  --clr-gray100: #f9fbff;
+  --clr-gray150: #f4f6fb;
+  --clr-gray200: #eef1f6;
+  --clr-gray300: #e1e5ee;
+  --clr-gray400: #767b91;
+  --clr-gray500: #4f546c;
+
+  /*   border radius */
+  --radius: 0.2rem;
+}
+
+// RESET
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+// Base Styles
+body {
+  font-family: Montserrat, sans-serif;
+  background-color: var(--clr-gray100);
+}
+
+// Navbar
+.nav {
+  position: absolute;
+  background: #fff;
+  box-shadow: 0px 0px 10px var(--clr-gray300);
+  height: 100vh;
+
+  &__expand {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--clr-gray400);
+    background: #fff;
+    box-shadow: 0px 0px 10px var(--clr-gray300);
+    border-radius: 50%;
+    position: absolute;
+    right: -1rem;
+    top: 1rem;
+    z-index: 99;
+    cursor: pointer;
+    transform: rotateZ(-180deg);
+    transition: transform 200ms ease-in-out;
+
+    &:hover {
+      fill: var(--clr-gray500);
+    }
+  }
+
+  // list
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    // flex item
+    &item {
+      list-style: none;
+      transition: all 200ms ease-in;
+      padding: 1rem 1.5rem;
+      border-left: 6px solid transparent;
+      cursor: pointer;
+      
+      &:first-child {
+        margin-bottom: 2rem;
+      }
+
+      &:hover {
+        background: var(--clr-gray150);
+      }
+
+      a {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        color: var(--clr-gray400);
+        text-decoration: none;
+        font-weight: 500;
+        
+        // flex item
+        svg {
+          fill: var(--clr-gray400);
+          width: 2rem;
+        }
+      }
+      
+
+      // different states
+      &-active {
+        background-color: var(--clr-gray200);
+        border-left: 6px solid var(--clr-primary);
+
+        a > svg,
+        p {
+          color: var(--clr-primary);
+          fill: var(--clr-primary);
+        }
+      }
+    }
+  }
+
+  // close state
+  &-closed &__expand {
+    transform: rotateZ(0deg);
+  }
+
+  &-closed &__listitem p {
+    display: none;
+  }
+}
+
+
