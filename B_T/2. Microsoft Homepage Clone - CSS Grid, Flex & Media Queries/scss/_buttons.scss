@@ -40,22 +40,31 @@
   text-transform: uppercase;
   font-weight: bold;
   transition: all 300ms linear;
+  border-bottom: 2px solid transparent;
 
   &::after {
-    font-family: 'Font Awesome 5 Free';
-    content: '\f054';
-    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    content: '\f061';
     font-size: 0.9rem;
-    margin-left: 5px;
-    transition: all 150ms linear;
+    font-weight: 900;
+    position: relative;
+    left: 0.5rem;
   }
 
   &:hover {
-    transform: rotate(2deg);
     border-bottom: 2px solid #0067B8;
+  } 
 
-    &::after {
-      margin-left: 7px;
-    }
+  &:hover::after {
+    animation: arrow 1s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    left: 0.5rem;
+  }
+  100% {
+    left: 1.5rem;
   }
 }
