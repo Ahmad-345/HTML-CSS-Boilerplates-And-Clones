@@ -1,0 +1,241 @@
+
+// Utilities
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background: var(--clr-primary);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+  &:hover {
+    transform: scale(0.98);
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px #fff solid;
+}
+
+// Backgrounds & colored buttons
+%shared-color {
+  color: #fff;
+  a {
+    color: #fff;
+  }
+}
+
+.bg-primary,
+.btn-primary {
+  background-color: var(--clr-primary);
+  @extend %shared-color;
+}
+
+.bg-secondary,
+.btn-secondary {
+  background-color: var(--clr-secondary);
+  @extend %shared-color;
+}
+
+.bg-dark,
+.btn-dark {
+  background-color: var(--clr-dark);
+  @extend %shared-color;
+}
+
+.bg-light,
+.btn-light {
+  background-color: var(--clr-light);
+  color: #333;
+}
+
+// Text Colors
+.text-primary {
+  color: var(--clr-primary);
+}
+
+.text-secondary {
+  color: var(--clr-secondary);
+}
+
+.text-dark {
+  color: var(--clr-dark);
+}
+
+.text-light {
+  color: var(--clr-light);
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Active 
+.active {
+  font-weight: bold;
+}
+
+// Alert 
+.alert {
+  background-color: var(--clr-light);
+  padding: 10px 20px;
+  font-weight: bold;
+  margin: 15px 0;
+
+  i {
+    margin-right: 10px;
+  }
+}
+
+.alert-success {
+  background-color: var(--clr-success);
+  color: #fff;
+}
+
+.alert-error {
+  background-color: var(--clr-error);
+  color: #fff;
+}
+
+// Text sizes 
+.lead {
+  font-size: 20px;
+}
+
+.small {
+  font-size: 1rem;
+}
+
+.medium {
+  font-size: 2rem;
+}
+
+.large {
+  font-size: 3rem;
+}
+
+.xlarge {
+  font-size: 4rem;
+}
+
+// Margin on y-axis
+.my-10 {
+  margin: 1rem 0;
+} 
+
+.my-20 {
+  margin: 1.5rem 0;
+}
+
+.my-30 {
+  margin: 2rem 0;
+} 
+
+.my-40 {
+  margin: 3rem 0;
+} 
+
+.my-50 {
+  margin: 4rem 0;
+} 
+
+// Margins all around
+.m-10 {
+  margin: 1rem;
+} 
+
+.m-20 {
+  margin: 1.5rem;
+}
+
+.m-30 {
+  margin: 2rem;
+} 
+
+.m-40 {
+  margin: 3rem;
+} 
+
+.m-50 {
+  margin: 4rem;
+} 
+
+// Padding on y-axis
+.py-10 {
+  padding: 1rem 0;
+} 
+
+.py-20 {
+  padding: 1.5rem 0;
+}
+
+.py-30 {
+  padding: 2rem 0;
+} 
+
+.py-40 {
+  padding: 3rem 0;
+} 
+
+.py-50 {
+  padding: 4rem 0;
+} 
+
+// Paddings all around
+.p-10 {
+  padding: 1rem;
+} 
+
+.p-20 {
+  padding: 1.5rem;
+}
+
+.p-30 {
+  padding: 2rem;
+} 
+
+.p-40 {
+  padding: 3rem;
+} 
+
+.p-50 {
+  padding: 4rem;
+} 
