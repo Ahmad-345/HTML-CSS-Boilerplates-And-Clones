@@ -1,0 +1,147 @@
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Open+Sans&display=swap');
+
+// color varbiables 
+:root {
+  --body-font-size: 62.5%;
+  --body-font-color: #5f5f5f;
+  --body-font-family: 'Nova Square', cursive;
+  --heading-font-family: 'Playfair Display', serif;
+  --background-clr: #ecf4ff;
+  --light-clr: #f4f4f4;
+  --dark-clr: #262626;
+  --light-gray-clr: #f2f3f7;
+  --light-dark-clr: #333;
+  --orange-clr: #ec5453;
+  --blue-clr: #2c98f0;
+  --yellow-clr: #f9bf3f;
+  --purple-clr: #a84cb8;
+  --dark-blue-clr: #4054b2;
+
+  --clr-primary-hover: #29e6a7;
+  --clr-primary-dark: #039d69;
+
+  --clr-gray100: #f0f7f8;
+  --clr-gray200: #cfd8dc;
+  --clr-gray300: #a7b7be;
+  --clr-gray400: #6b7e86;
+  --clr-gray500: #425a65;
+  
+  --clr-success: #5cb85c;
+  --clr-error: #d9534f;
+
+  /*   border radius */
+  --radius: 0.2rem;
+}
+
+// Utilities
+@import 'utilities';
+
+// Animations
+@import 'animations';
+
+// RESET
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+// Base Styles
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  background-color: var(--background-clr);
+  color: var(--light-dark-clr);
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+h1, 
+h2 {
+  color: var(--light-dark-clr);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 5.4rem;
+  color: #45a5eb;
+  margin-bottom: 5rem;
+
+  span {
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+}
+
+h2 {
+  font-size: 4.2rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+.code, pre {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.choice-container { 
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 1.8rem;
+  border: 0.1rem solid var(--blue-clr);
+  background-color: var(--light-clr);
+  
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    transition: transform 100ms ease-out;
+  }
+
+  .choice-prefix {
+    padding: 1.5rem 2.5rem;
+    background-color:  var(--blue-clr);
+    color: var(--light-clr);
+    text-transform: lowercase;
+  }
+
+  .choice-text {
+    padding: 1.5rem;
+    width: 100%;
+  }
+}
+
+.correct {
+  background-color: var(--clr-success);
+}
+
+.incorrect {
+  background-color: var(--clr-error);
+}
+
+
+// Media Queries 
+@import 'mediaQueries';
