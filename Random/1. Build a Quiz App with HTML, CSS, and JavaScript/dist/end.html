@@ -5,11 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
-  <title>End</title>
+  <title>Congrats!</title>
 </head>
 <body>
-<h1>Be</h1>
+  <div class="container">
+    <div id="end" class="flex-center flex-column">
+      <h1 id="finalScore"></h1>
+      <form>
+        <input type="text" name="userName" id="userName" placeholder="User name">
+        <button type="submit" id="saveScoreBtn" class="btn" onclick="saveHighScore(event)" disabled>Save</button>
+      </form>
+      <a href="game.html" class="btn">Play Again</a>
+      <a href="index.html" class="btn">Go Home</a>
+    </div>
+  </div>
 
+  <!--Link JS-->
+  <script src="js/end.js"></script>
 </body>
 </html>
 

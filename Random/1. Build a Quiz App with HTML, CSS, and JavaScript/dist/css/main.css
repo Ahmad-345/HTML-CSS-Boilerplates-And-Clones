@@ -3,7 +3,7 @@
   --body-font-size: 62.5%;
   --body-font-color: #5f5f5f;
   --body-font-family: 'Nova Square', cursive;
-  --heading-font-family: 'Playfair Display', serif;
+  --heading-font-family: Arial, Helvetica, sans-serif;
   --background-clr: #ecf4ff;
   --light-clr: #f4f4f4;
   --dark-clr: #262626;
@@ -24,7 +24,7 @@
   --clr-success: #5cb85c;
   --clr-error: #d9534f;
   /*   border radius */
-  --radius: 0.2rem; }
+  --radius: 3px; }
 
 .container {
   width: 100vw;
@@ -124,6 +124,21 @@
   color: var(--light-clr);
   margin-top: 2.5rem;
   padding: 1rem 5rem; }
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  form input {
+    margin-bottom: 1rem;
+    width: 30rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    outline: none; }
+    form input::placeholder {
+      color: #aaa; }
 
 .bg-primary,
 .btn-primary, .bg-secondary,
@@ -381,6 +396,37 @@ h3 {
 
 .incorrect {
   background-color: var(--clr-error); }
+
+#hud {
+  display: flex;
+  justify-content: space-between; }
+  #hud #hud-item .hud-prefix {
+    text-align: center;
+    font-size: 2rem; }
+  #hud #hud-item .hud-main-text {
+    text-align: center; }
+
+#hud > #hud-item > #progress-bar {
+  width: 20rem;
+  height: 4rem;
+  border: 0.3rem solid var(--blue-clr);
+  margin-top: 1rem; }
+  #hud > #hud-item > #progress-bar #progress-bar-full {
+    height: 3.4rem;
+    width: 0;
+    background-color: var(--blue-clr); }
+
+#highScoreList {
+  padding: 2rem;
+  margin-bottom: 4rem;
+  background-color: var(--clr-gray200);
+  border-radius: var(--radius);
+  border: 3px solid var(--light-dark-clr);
+  font-family: var(--heading-font-family); }
+  #highScoreList .high-score {
+    font-size: 2rem; }
+    #highScoreList .high-score:hover {
+      transform: scale(1.025); }
 
 @media (max-width: 768px) {
   .choice-container {

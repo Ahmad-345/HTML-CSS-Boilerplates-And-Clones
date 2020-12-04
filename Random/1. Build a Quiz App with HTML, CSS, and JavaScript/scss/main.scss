@@ -6,7 +6,7 @@
   --body-font-size: 62.5%;
   --body-font-color: #5f5f5f;
   --body-font-family: 'Nova Square', cursive;
-  --heading-font-family: 'Playfair Display', serif;
+  --heading-font-family: Arial, Helvetica, sans-serif;
   --background-clr: #ecf4ff;
   --light-clr: #f4f4f4;
   --dark-clr: #262626;
@@ -31,7 +31,7 @@
   --clr-error: #d9534f;
 
   /*   border radius */
-  --radius: 0.2rem;
+  --radius: 3px;
 }
 
 // Utilities
@@ -142,6 +142,54 @@ h3 {
   background-color: var(--clr-error);
 }
 
+// HUD
+#hud {
+  display: flex;
+  justify-content: space-between;
+
+  #hud-item {
+    .hud-prefix {
+      text-align: center;
+      font-size: 2rem;
+    }
+    .hud-main-text {
+      text-align: center;
+    }
+  }
+} // END::HUD
+
+// Progress Bar
+#hud > #hud-item > #progress-bar {
+  width: 20rem;
+  height: 4rem;
+  border: 0.3rem solid var(--blue-clr);
+  margin-top: 1rem;
+
+  #progress-bar-full {
+    height: 3.4rem;
+    width: 0;
+    background-color: var(--blue-clr);
+  }
+}
+
+// HighScores List
+#highScoreList {
+  padding: 2rem;
+  margin-bottom: 4rem;
+  background-color: var(--clr-gray200);
+  border-radius: var(--radius);
+  border: 3px solid var(--light-dark-clr);
+  font-family: var(--heading-font-family);
+
+  .high-score {
+    font-size: 2rem;
+
+    &:hover {
+      transform: scale(1.025);
+
+    }
+  }
+}
 
 // Media Queries 
 @import 'mediaQueries';
