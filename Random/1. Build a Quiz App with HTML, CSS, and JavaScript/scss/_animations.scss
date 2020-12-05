@@ -1,34 +1,13 @@
 
 // Animations
-@keyframes move-wheel {
+@keyframes spin {
   0% {
-    opacity: 1;
-    transform: translateY(-1rem);
+    transform: rotate(0deg);
   }
   100% {
-    opacity: 0;
-    transform: translateY(2rem);
+    transform: rotate(360deg);
   }
 }
-
-@keyframes arrow-down {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 0.25%;
-  }
-  50% {
-    opacity: 0.5%;
-  }
-  75% {
-    opacity: 0.75%;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 
 @keyframes slideInFromLeft {
   0% {
@@ -59,9 +38,11 @@
 
 @keyframes slideInFromBottom {
   0% {
+    opacity: 0;
     transform: translateY(100%);
   }
   100% {
+    opacity: 1;
     transform: translateX(0);
   }
 }

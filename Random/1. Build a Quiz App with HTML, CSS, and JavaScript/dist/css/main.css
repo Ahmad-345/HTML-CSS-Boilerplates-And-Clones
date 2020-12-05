@@ -280,24 +280,11 @@ form {
 .p-50 {
   padding: 4rem; }
 
-@keyframes move-wheel {
+@keyframes spin {
   0% {
-    opacity: 1;
-    transform: translateY(-1rem); }
+    transform: rotate(0deg); }
   100% {
-    opacity: 0;
-    transform: translateY(2rem); } }
-@keyframes arrow-down {
-  0% {
-    opacity: 0; }
-  25% {
-    opacity: 0.25%; }
-  50% {
-    opacity: 0.5%; }
-  75% {
-    opacity: 0.75%; }
-  100% {
-    opacity: 1; } }
+    transform: rotate(360deg); } }
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%); }
@@ -315,8 +302,10 @@ form {
     transform: translateX(0); } }
 @keyframes slideInFromBottom {
   0% {
+    opacity: 0;
     transform: translateY(100%); }
   100% {
+    opacity: 1;
     transform: translateX(0); } }
 *,
 *::before,
@@ -377,7 +366,8 @@ h3 {
   width: 100%;
   font-size: 1.8rem;
   border: 0.1rem solid var(--blue-clr);
-  background-color: var(--light-clr); }
+  background-color: var(--light-clr);
+  animation: slideInFromBottom 0.75s ease-out; }
   .choice-container:hover {
     cursor: pointer;
     transform: scale(1.01);
@@ -427,6 +417,14 @@ h3 {
     font-size: 2rem; }
     #highScoreList .high-score:hover {
       transform: scale(1.025); }
+
+#loader {
+  border: 1.6rem solid var(--light-clr);
+  border-radius: 50%;
+  border-top: 1.6rem solid var(--blue-clr);
+  width: 12rem;
+  height: 12rem;
+  animation: spin 2s linear infinite; }
 
 @media (max-width: 768px) {
   .choice-container {

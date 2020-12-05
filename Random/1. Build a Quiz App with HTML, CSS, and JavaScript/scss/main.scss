@@ -114,6 +114,7 @@ h3 {
   font-size: 1.8rem;
   border: 0.1rem solid var(--blue-clr);
   background-color: var(--light-clr);
+  animation: slideInFromBottom 0.75s ease-out;
   
   &:hover {
     cursor: pointer;
@@ -189,6 +190,15 @@ h3 {
 
     }
   }
+}
+
+#loader {
+  border: 1.6rem solid var(--light-clr);
+  border-radius: 50%;
+  border-top: 1.6rem solid var(--blue-clr);
+  width: 12rem;
+  height: 12rem;
+  animation: spin 2s linear infinite;
 }
 
 // Media Queries 
