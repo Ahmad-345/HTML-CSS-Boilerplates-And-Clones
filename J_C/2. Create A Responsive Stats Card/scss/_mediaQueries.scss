@@ -1,0 +1,27 @@
+
+@media (min-width: 768px) {
+  .card {
+    max-width: 90rem;
+    display: flex;
+    align-items: center;
+    padding: 10rem;
+
+    .info-left {
+      flex: 1;
+      padding-right: 3.5rem;
+    }
+
+    .info-right {
+      flex: 1;
+      margin-top: 0;
+
+      .stat-group .stat-number {
+        font-size: 4rem;
+      }
+
+      .stat-group .stat-name {
+        font-size: 1.1rem
+      }
+    }
+  }
+}

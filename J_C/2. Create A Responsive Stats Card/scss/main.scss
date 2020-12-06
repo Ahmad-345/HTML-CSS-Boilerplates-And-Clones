@@ -1,0 +1,53 @@
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Playfair+Display:wght@400;600&display=swap');
+
+// color varbiables 
+:root {
+  --body-font-family: 'Open Sans', sans-serif;
+  --heading-font-family: 'Playfair Display', serif;
+
+  /*   border radius */
+  --radius: 0.2rem;
+}
+
+// Utilities
+@import 'card';
+
+// Animations
+@import 'animations';
+
+// RESET
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+// Base Styles
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #443874;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+
+
+
+// Media Queries 
+@import 'mediaQueries';
