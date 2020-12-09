@@ -1,0 +1,30 @@
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+// Utilities
+@import 'formValidation';
+@import 'utilities';
+
+// RESET
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+// Base Styles
+html {
+  font-size: 62.5%; // 10px
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9b59b6;
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
