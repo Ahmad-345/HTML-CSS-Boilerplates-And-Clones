@@ -1,0 +1,17 @@
+
+@media (max-width: 798px) {
+  .showcase, 
+  .showcase .header {
+    padding: 40px;
+  }
+
+  .showcase {
+    .text h2 {
+      font-size: 3em;
+    }
+
+    .text h3 {
+      font-size: 2em;
+    }
+  }
+}
