@@ -34,11 +34,15 @@
   --radius: 0.2rem;
 }
 
+
 // Utilities
 @import 'utilities';
 
 // Animations
 @import 'animations';
+
+// Image Gallery with Hover Effect
+@import 'gallery';
 
 // RESET
 *,
@@ -108,6 +112,7 @@ p {
   color: var(--white-clr);
   z-index: 2;
   transition: 0.5s;
+  overflow: visible;
 
   &.active {
     right: 300px;
@@ -260,8 +265,8 @@ p {
 
 // Main
 .main {
-
-
+  width: 100%;
+  height: 600px;
 } // END::/Main
 
 
