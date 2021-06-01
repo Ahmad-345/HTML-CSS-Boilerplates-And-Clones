@@ -1,0 +1,161 @@
+
+/* Text colors */
+.text-primary {
+  color: #28a745;
+}
+
+.text-secondary {
+  color: #0284d0;
+}
+
+/* Button */
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.65rem 1.9rem;
+  color: #fff;
+  background: #28a745;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn > i {
+  padding-right: 15px;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-primary, .bg-primary {
+  background: #28a745;
+  color: #fff;
+}
+.btn-secondary, .bg-secondary {
+  background: #0284d0;
+  color: #fff;
+}
+.btn-dark, .bg-dark {
+  background: #333;
+  color: #fff;
+}
+.btn-light, .bg-light {
+  background: #f4f4f4;
+  color: #333;
+} /* END OF --> Button */
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+/* Main */
+/* Main > SECTION: About > flex-items */
+.flex-items {
+  display: flex;
+  text-align: center;
+  justify-content: center; /* Horizontal */
+  align-items: center; /* Vertical */
+  height: 100%;
+}
+
+.flex-items > div {
+  padding: 20px;
+  margin: 10px;
+  background: #f4f4f4;
+  border-radius: 2px;
+  /* offset-x | offset-y | blur-radius | spread-radius | color  */
+  box-shadow: -2px -2px 20px rgba(0, 0, 0, 0.08), 
+              2px 2px 20px rgba(0, 0, 0, 0.08);
+} /* END OF --> Main > SECTION: About > flex-items */
+
+
+/* Main > SECTION: Solutions.Flex-columns */
+.flex-columns.flex-reverse .row {
+  flex-direction: row-reverse;
+}
+
+.flex-columns .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.flex-columns .column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1; /* main-axis goes in column so take full height */
+}
+
+.flex-columns .column .column-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flex-columns .column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* align horizontal here */
+  justify-content: center;
+  padding: 30px;
+}
+
+.flex-columns .column .column-1,
+.flex-columns .column .column-2 {
+  height: 100%;
+}
+
+.flex-columns h2 {
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.flex-columns h4 {
+  margin-bottom: 10px;
+}
+
+.flex-columns p {
+  margin: 20px 0;
+} /* END OF --> Main > SECTION: Solutions.Flex-columns */
+
+
+/* Main > SECTION: Cases */
+
+/* section header */
+.section-padding {
+  padding: 20px 20px 40px;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertical */
+  align-items: center; /* Horizontal */
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 40px;
+  margin: 20px 0;
+} /* END OF --> section header */
+
+/* flex-grid */
+.flex-grid .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+} 
+
+.flex-grid .column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+} /* END OF --> flex-grid */
+
+
+/* END OF --> Main > SECTION: Cases */
+
+/* END OF --> Main */
