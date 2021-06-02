@@ -1,0 +1,119 @@
+
+:root {
+  --primary-color: #425b84;
+  --secondary-color: #5b7bb4;
+  --max-width: 1100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 1rem/1.5 'Arial', sans-serif;
+  background: var(--primary-color);
+  color: #fff;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+
+/* Header */
+#main-header {
+  background: var(--secondary-color);
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: var(--max-widht);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 2.3rem;
+  margin-bottom: 8px;
+} /* END OF --> Header */
+
+
+/* Section > Timeline */
+#timeline ul {
+  background: var(--primary-color);
+  padding: 50px 0;
+}
+
+/* li is used as timeline-line */
+#timeline ul li {
+ list-style: none;
+ position: relative;
+ width: 6px;
+ margin: 0 auto;
+ padding-top: 50px;
+ background: #fff;
+}
+
+/* chevron icons */
+#timeline ul li > div h3 > i {
+  margin-right: 8px;
+}
+
+/* Boxes */
+#timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 1rem;
+  background: var(--secondary-color);
+  transition: all .5s ease-in-out;
+}
+
+/* Right side boxes */
+#timeline ul li:nth-child(odd) > div {
+  left: 40px;
+}
+
+/* Left side boxes */
+#timeline ul li:nth-child(even) > div {
+  left: -434px;
+}
+
+/* Timeline Dot */
+#timeline ul li:after {
+  content: '';
+  width: 25px;
+  height: 25px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: background .5s ease-in-out;
+}
+
+/* Arrows Base */
+#timeline div:before {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* Arrow Right */
+#timeline ul li:nth-child(odd) > div:before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent var(--secondary-color) transparent transparent;
+}
+
+/* Arrow Left */
+#timeline ul li:nth-child(even) > div:before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent  transparent transparent var(--secondary-color);
+}
+
+/* END OF --> Section > Timeline */
