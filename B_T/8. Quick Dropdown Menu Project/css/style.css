@@ -1,0 +1,164 @@
+
+:root {
+  --primary-color: crimson;
+  --secondary-color: darkred;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, 
+body {
+  background: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar ul {
+  list-style: none;
+}
+
+#navbar ul li {
+  color: #333;
+  display: inline-block;
+  padding: 1rem;
+  position: relative;
+}
+
+#navbar ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* hide nested ul by default */
+#navbar ul li ul {
+  display: none;
+}
+
+#navbar ul li:hover {
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+}
+
+#navbar ul li:hover a {
+  color: #fff;
+}
+
+/* nested dropdown show */
+#navbar ul li:hover ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 200px;
+  margin-top: 1rem;
+}
+
+#navbar ul li:hover ul li {
+  display: block;
+  background: #e7e7e7;
+}
+
+#navbar ul li:hover ul li a{
+  color: #333;
+}
+
+#navbar ul li:hover ul li:hover {
+  background: #e0e0e0;
+  color: inherit;
+}
+
+#navbar ul li:hover ul li span {
+  float: right;
+  color: #fff;
+  background: var(--primary-color);
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  border-radius: 2px;
+}
+
+#navbar ul li:hover ul li:hover span {
+  background: var(--secondary-color);
+}
+
+
+/* showcase */
+#showcase {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+  background: var(--primary-color);
+}
+
+#showcase h1 {
+  color: #fff;
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+#showcase p {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+
+/* footer (own touches) */
+.footer-flex ul li {
+  list-style: none;
+}
+
+.footer-flex ul li a {
+  text-decoration: none;
+  color: #333;
+}
+.footer-flex p {
+  color: #333;
+}
+
+.footer-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background: #f4f4ff;
+}
+
+.footer-flex > ul {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.footer-flex > ul li {
+  width: 1fr;
+  margin: 0 5px
+}
+/* END OF --> footer (own touches) */
+
+@media(max-width: 600px) {
+  
+  #showcase h1 {
+    font-size: 3rem;
+  }
+
+  #showcase p {
+    font-size: 1.2rem;
+  }
+
+  #navbar ul li {
+    display: block;
+  }
+  
+  #navbar ul li:hover ul {
+    width: 100%;
+    position: relative;
+  }
+}
