@@ -1,0 +1,36 @@
+/* Header */
+.header {
+  height: 70vh;
+}
+
+.tabs .hide-on-small-screen {
+  display: none;
+}
+
+nav ul {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "logo sign-in-button";
+}
+
+nav ul li:first-child {
+  justify-self: start;
+}
+
+.header .header-content h1 {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.header .header-content p {
+  font-size: 2.4rem; 
+}
+
+.btn-xl {
+  font-size: 2.4rem;
+}
+
+.text-large {
+  font-size: 2.2rem;
+  margin-bottom: 1.6rem;
+}
+

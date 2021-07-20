@@ -1,0 +1,39 @@
+.btn-xl {
+  font-size: 2.4rem;
+}
+
+.text-large {
+  font-size: 10.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.header::after {
+  box-shadow: inset 80px 80px 250px #000, inset -80px -80px 250px #000;
+}
+
+#tab-1-content .tab-grid-container {
+  grid-template-columns: 1fr;
+}
+
+#tab-1-content .tab-1-text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#tab-2-content .tab-2-content-top {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+#tab-3-content .tab-3-content-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
