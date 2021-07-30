@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* 62.5% of 16px = 10px */
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--color-body);
+  font-family: sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.parent {
+  background-color: skyblue;
+  font-size: 4rem;
+  height: 75vh;
+  width: 75vh;
+  padding: 1.6rem;
+  position: relative;
+}
+
+.child {
+  background-color: crimson;
+  /* width: 105rem; */
+  /* height: 15rem; */
+  position: absolute;
+  bottom: 0;
+  /* left: 0; */
+
+  /* how to make its size dynamically */
+  /* first remove its width and height */
+  top: 0;
+  bottom: 0;
+  /* left: 0; */
+  /* right: 80%; */
+
+  /* Disable one of the positioning properties then it will get its width or height from
+     the width or height as set to. */
+  /* width: 5rem;      */
+
+  left: 25%;
+  right: 25%;
+}
